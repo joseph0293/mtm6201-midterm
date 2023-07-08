@@ -34,13 +34,44 @@ img {
 
 .navigation {
     background-color: var(--mainbrandcolor);
-    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 5;
     position: fixed;
 }
+
+.search-input {
+    display: none;
+    text-align: center;
+    margin: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+.pullsearch:active .search-input {
+    display: block;
+}
+
+.srch {
+    padding: 15px;
+    border: 1px solid var(--mainbrandcolor);
+    border-radius: 7px;
+}
+
+.srchbtn {
+    padding: 12px;
+    border-radius: 7px;
+    background-color: white;
+    color: var(--mainbrandcolor);
+    border: 1px solid var(--mainbrandcolor);
+}
+
 
 nav ul li {
     list-style: none;
@@ -150,6 +181,11 @@ button:active {
     margin-bottom: 20px;
 }
 
+.aboutimg {
+    border-radius: 20px;
+}
+
+
 .cardtitles {
     display: flex;
     justify-content: space-between;
@@ -171,7 +207,7 @@ button:active {
 
 .counter {
     border: 1px solid var(--mainbrandcolor);
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,6 +220,7 @@ button:active {
 .aboutbakery {
     margin: 30px;
 }
+
 
 /* Styling footer */
 
