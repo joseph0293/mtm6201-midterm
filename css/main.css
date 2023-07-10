@@ -103,7 +103,8 @@ nav a {
     position: fixed;
 }
 
-.pullsearch:active .search-input {
+.pullsearch:active,
+.pullsearch:hover .search-input {
     display: flex;
     justify-content: center;
 }
