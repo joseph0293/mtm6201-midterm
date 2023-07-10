@@ -1,3 +1,5 @@
+/* Setting brand identities */
+
 :root {
     --mainbrandcolor: #0707EE;
     --accentsecondary1: #50EA6D;
@@ -7,6 +9,13 @@
     --secondarybrandfont: Montserrat;
 }
 
+.container {
+    margin: 0 auto;
+    color: var(--mainbrandcolor);
+    max-width: 800px;
+}
+
+/* set scroll behaviour */
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -22,15 +31,32 @@ h2 {
     margin-right: 7%;
     text-align: center;
 }
-.container {
-    margin: 0 auto;
-    color: var(--mainbrandcolor);
-    max-width: 500px;
-}
+
 img {
     width: 100%;
 }
 
+/* animate nav icons on click */
+
+.homeanim,
+.categanim,
+.searchanim,
+.shopanim,
+.searchanim {
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-property: transform;
+}
+
+.homeanim:active,
+.categanim:active,
+.shopanim:active,
+.searchanim:active {
+    transform: translateY(-15px);
+}
+
+
+/* Pinning navigation to bottom and styling */
 
 .navigation {
     background-color: var(--mainbrandcolor);
@@ -41,40 +67,6 @@ img {
     right: 0;
     z-index: 5;
     position: fixed;
-}
-
-.search-input {
-    display: none;
-    transform: translate(0px, -60px);
-    margin: 15px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    position: fixed;
-}
-
-
-.pullsearch:active,
-.pullsearch:hover .search-input {
-    display: flex;
-    justify-content: center;
-}
-
-.srch {
-    padding: 15px;
-    font-size: 1.5rem;
-    border: 1px solid var(--mainbrandcolor);
-    border-radius: 7px;
-    width: 90%;
-}
-
-.srchbtn {
-    padding: 18px;
-    border-radius: 7px;
-    background-color: white;
-    color: var(--mainbrandcolor);
-    border: 1px solid var(--mainbrandcolor);
 }
 
 
@@ -98,6 +90,41 @@ nav a {
     font-size: 2rem;
 }
 
+/* Ensuring search shows search bar on click for mobile and (show on hover, only for coding reference) */
+.search-input {
+    display: none;
+    transition: all;
+    transform: translate(0px, -60px);
+    margin: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+.pullsearch:active .search-input {
+    display: flex;
+    justify-content: center;
+}
+
+.srch {
+    padding: 15px;
+    font-size: 1.5rem;
+    border: 1px solid var(--mainbrandcolor);
+    border-radius: 7px;
+    width: 100%;
+}
+
+.srchbtn {
+    padding: 18px;
+    border-radius: 7px;
+    background-color: white;
+    color: var(--mainbrandcolor);
+    border: 1px solid var(--mainbrandcolor);
+}
+
+/* Styling text and buttons */
 h1 {
     margin-top: 15px;
     margin-bottom: 20px;
@@ -235,10 +262,12 @@ footer {
     padding: 30px;
     padding-bottom: 80px;
 }
+
 .copyline {
     font-size: 0.8rem;
     color: lightgray;
 }
+
 footer a {
     text-decoration: none;
     color: white;
@@ -270,7 +299,7 @@ footer button {
     border: 1px solid white;
     border-radius: 5px;
     grid-column: 4 / span 1;
-} 
+}
 
 footer input {
     grid-column: 1 / span 3;
