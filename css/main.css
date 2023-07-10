@@ -12,7 +12,16 @@
 .container {
     margin: 0 auto;
     color: var(--mainbrandcolor);
-    max-width: 800px;
+}
+
+/* display none for desktop stuff */
+
+.croissant,
+.bannerdesktop,
+.desknavdisplay,
+.aboutdesktopimg,
+.brown {
+    display: none;
 }
 
 /* set scroll behaviour */
@@ -58,7 +67,7 @@ img {
 
 /* Pinning navigation to bottom and styling */
 
-.navigation {
+.navigationmobile {
     background-color: var(--mainbrandcolor);
     margin-left: 10px;
     margin-right: 10px;
@@ -67,30 +76,27 @@ img {
     right: 0;
     z-index: 5;
     position: fixed;
-}
-
-
-nav ul li {
-    list-style: none;
-    text-decoration: none;
-}
-
-nav ul {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     border-radius: 15px 15px 0px 0px;
 
-
 }
 
-nav a {
+
+.navigationmobile li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.navigationmobile a {
     color: white;
     text-decoration: none;
     font-size: 2rem;
 }
 
 /* Ensuring search shows search bar on click for mobile and (show on hover, only for coding reference) */
+
 .search-input {
     display: none;
     transition: all;
@@ -129,6 +135,7 @@ nav a {
     background-color: var(--mainbrandcolor);
     color: white;
 }
+
 
 /* Styling text and buttons */
 h1 {
@@ -213,14 +220,6 @@ button:active {
 }
 
 /* Styling cards for bestsellers */
-
-.container {
-    background-image:url(/images/greenspot.svg);
-    background-repeat: no-repeat;
-    background-size: 200%;
-    background-position-x: -100px;
-    background-position-y: -50px;
-}
 
 .cardimg {
     margin-top: 20px;
@@ -350,4 +349,136 @@ footer hr {
     margin-top: 40px;
     margin-bottom: 40px;
     border: 0.5px solid white;
+}
+
+/* --------------------------
+        Desktop Styling 
+----------------------------- */
+
+@media screen and (min-width:800px) {
+
+    .bannerdesktop {
+        display: block;
+    }
+
+    .banner {
+        display: none;
+    }
+    .deskgridheader {
+
+        margin: 0 auto;
+        max-width: 1400px;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.2fr;
+        grid-template-areas:
+        "title text"
+        "title button";
+        gap: 0.5rem;
+    }
+
+    h1 {
+        grid-area: title;
+        font-size: 6rem;
+        line-height: 5rem;
+    }
+
+    .deskgridheader p {
+        grid-area: text;
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    .titlebut {
+        grid-area: button;
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 0;
+    }
+
+    /* Style navigation */
+    
+    .navigationmobile {
+        display: none;
+    }
+
+    .desknavdisplay {
+        display: block
+    }
+
+    .desk-logo {
+        scale: 5%;
+    }
+
+    .desknav {
+        display: flex;
+        background-color: var(--mainbrandcolor);
+        margin-left: 10px;
+        margin-right: 10px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        position: fixed;
+        border-radius: 0px 0px 15px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+    
+    .desknav a {
+        text-decoration: none;
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        font-family: var(--mainbrandfont);
+    }
+
+    .search-desk {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .srch {
+        padding: 10px;
+    }
+
+    .magnifydesk {
+        padding-left: 10px;
+    }
+
+    /* Styling Categories/Bestsellers section */
+
+    .featured {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .aboutimg {
+        display: none;
+        margin: 0 auto;
+    }
+
+    .croissant,
+    .brown,
+    .aboutdesktopimg {
+        display: block;
+    }
+}
+
+
+
+/* Just some margin adjustments */
+
+@media screen and (max-width:1300px) {
+    .featured {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }

@@ -20,10 +20,26 @@
 
 <body class="container">
     <header>
+
+        <nav class="desknavdisplay">
+            <ul class="desknav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#shopforbread">Categories</a></li>
+                <li>
+                    <div class="search-desk">
+                        <input class="srch" type="search">
+                        <a href="#"><i class="magnifydesk fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i> Bag</a></li>
+            </ul>
+
+        </nav>
+        
         <nav>
-            <ul class="navigation">
+            <ul class="navigationmobile">
                 <li><a href="#"><i class="homeanim fa-sharp fa-solid fa-house"></i></a></li>
-                <li><a href="#"><i class="categanim fa-sharp fa-solid fa-border-all"></i></a></li>
+                <li><a href="#shopforbread"><i class="categanim fa-sharp fa-solid fa-border-all"></i></a></li>
                 <li class="pullsearch">
                     <a>
                         <i class="searchanim fa-solid fa-magnifying-glass"></i>
@@ -40,18 +56,23 @@
                 </li>
             </ul>
         </nav>
+        <img class="bannerdesktop" src="images/bannerdesk.png" alt="banner">
         <img class="banner" src="images/banner.png" alt="sliced bread">
-        <h1>Baked Fresh Every Hour!</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, dolor repellendus natus veritatis repudiandae
-            dicta quo deleniti ea illo delectus soluta porro explicabo nulla tenetur illum voluptatum magnam. Ut,
-            doloremque.</p>
-            <div class="button">
+        <div class="deskgridheader">
+            <h1>Baked Fresh Every Hour!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, dolor repellendus natus veritatis
+                repudiandae
+                dicta quo deleniti ea illo delectus soluta porro explicabo nulla tenetur illum voluptatum magnam. Ut,
+                doloremque.
+            </p>
+            <div class="titlebut button">
                 <a href="#shopforbread">SHOP BREAD</a>
             </div>
+        </div>
     </header>
     <main class="container">
         <h2 id="shopforbread">BESTSELLERS</h2>
-        <div  class="featured">
+        <div class="featured">
             <section class="baguette">
                 <img class="cardimg" src="images/pexels-pixabay-461060.jpg" alt="Baguette Bread">
                 <div class="cardtitles">
@@ -90,9 +111,86 @@
                     <button>ADD TO CART</button>
                 </div>
             </section>
+            <section class="sourdough">
+                <img class="cardimg" src="images/sourdough.jpg" alt="Sourdough Bread">
+                <div class="cardtitles">
+                    <h3>Classic Sourdough</h3>
+                    <h3>$ 6.49</h3>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate explicabo ex, porro iusto eos
+                    iste perferendis fuga reprehenderit expedita, itaque laudantium, quod sint facilis corrupti
+                    dignissimos repellat similique ad magnam!
+                </p>
+                <div class="addtocart">
+                    <div class="counter">
+                        <div>-</div>
+                        <div>1</div>
+                        <div>+</div>
+                    </div>
+                    <button>ADD TO CART</button>
+                </div>
+            </section>
+            <section class="challah">
+                <img class="cardimg" src="images/poppysesamechallah.jpg" alt="Challah Bread">
+                <div class="cardtitles">
+                    <h3>Poppy Challah</h3>
+                    <h3>$ 6.49</h3>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate explicabo ex, porro iusto eos
+                    iste perferendis fuga reprehenderit expedita, itaque laudantium, quod sint facilis corrupti
+                    dignissimos repellat similique ad magnam!
+                </p>
+                <div class="addtocart">
+                    <div class="counter">
+                        <div>-</div>
+                        <div>1</div>
+                        <div>+</div>
+                    </div>
+                    <button>ADD TO CART</button>
+                </div>
+            </section>
+            <section class="croissant">
+                <img class="cardimg" src="images/croissant.jpg" alt="Croissant">
+                <div class="cardtitles">
+                    <h3>Croissants</h3>
+                    <h3>$ 2.49</h3>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate explicabo ex, porro iusto eos
+                    iste perferendis fuga reprehenderit expedita, itaque laudantium, quod sint facilis corrupti
+                    dignissimos repellat similique ad magnam!
+                </p>
+                <div class="addtocart">
+                    <div class="counter">
+                        <div>-</div>
+                        <div>1</div>
+                        <div>+</div>
+                    </div>
+                    <button>ADD TO CART</button>
+                </div>
+            </section>
+            <section class="brown">
+                <img class="cardimg" src="images/brown.jpg" alt="Brown Bread">
+                <div class="cardtitles">
+                    <h3>Brown Bread</h3>
+                    <h3>$ 4.99</h3>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate explicabo ex, porro iusto eos
+                    iste perferendis fuga reprehenderit expedita, itaque laudantium, quod sint facilis corrupti
+                    dignissimos repellat similique ad magnam!
+                </p>
+                <div class="addtocart">
+                    <div class="counter">
+                        <div>-</div>
+                        <div>1</div>
+                        <div>+</div>
+                    </div>
+                    <button>ADD TO CART</button>
+                </div>
+            </section>
         </div>
         <!-- About -->
         <aside class="aboutbakery">
+            <img class="aboutdesktopimg" src="images/about.jpg" alt="person holding sliced bread">
             <img class="aboutimg" src="images/pexels-marta-dzedyshko-7175453.jpg" alt="Person cutting bread">
             <h2>Locally Sourced, Freshly Baked, Swiftly Delivered</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cumque dolores blanditiis libero molestiae
@@ -103,9 +201,9 @@
                 quisquam eaque culpa, asperiores laboriosam cumque! Molestiae obcaecati, impedit error nesciunt
                 molestias alias eveniet fugit!
             </p>
-                <div class="button">
-                    <a href="#">Contact Us</a>
-                </div>
+            <div class="button">
+                <a href="#">Contact Us</a>
+            </div>
         </aside>
     </main>
     <footer>
