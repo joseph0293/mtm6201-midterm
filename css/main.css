@@ -214,6 +214,14 @@ button:active {
 
 /* Styling cards for bestsellers */
 
+.container {
+    background-image:url(/images/greenspot.svg);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position-x: -100px;
+    background-position-y: -50px;
+}
+
 .cardimg {
     margin-top: 20px;
     box-sizing: border-box;
