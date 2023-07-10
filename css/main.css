@@ -45,7 +45,7 @@ img {
 
 .search-input {
     display: none;
-    text-align: center;
+    transform: translate(0px, -60px);
     margin: 15px;
     bottom: 0;
     left: 0;
@@ -54,18 +54,23 @@ img {
     position: fixed;
 }
 
-.pullsearch:active .search-input {
-    display: block;
+
+.pullsearch:active,
+.pullsearch:hover .search-input {
+    display: flex;
+    justify-content: center;
 }
 
 .srch {
     padding: 15px;
+    font-size: 1.5rem;
     border: 1px solid var(--mainbrandcolor);
     border-radius: 7px;
+    width: 90%;
 }
 
 .srchbtn {
-    padding: 12px;
+    padding: 18px;
     border-radius: 7px;
     background-color: white;
     color: var(--mainbrandcolor);
