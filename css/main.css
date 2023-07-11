@@ -5,6 +5,7 @@
     --accentsecondary1: #50EA6D;
     --accentsecondary2: #FCC13D;
     --accentsecondary3: #FF7170;
+    --paragraphblue: #000088;
     --mainbrandfont: DM Serif Display;
     --secondarybrandfont: Montserrat;
 }
@@ -13,6 +14,9 @@
     margin: 0 auto;
     color: var(--mainbrandcolor);
 }
+hr {
+    border: 1px solid var(--mainbrandcolor);
+}
 
 /* display none for desktop stuff */
 
@@ -20,7 +24,8 @@
 .bannerdesktop,
 .desknavdisplay,
 .aboutdesktopimg,
-.brown {
+.brown,
+.social2 {
     display: none;
 }
 
@@ -31,7 +36,8 @@
 }
 
 header p {
-    margin: 30px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 h1,
@@ -68,7 +74,7 @@ img {
 /* Pinning navigation to bottom and styling */
 
 .navigationmobile {
-    background-color: var(--mainbrandcolor);
+    background-color: white;
     margin-left: 10px;
     margin-right: 10px;
     bottom: 0;
@@ -79,6 +85,7 @@ img {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    border: 2px solid var(--mainbrandcolor);
     border-radius: 15px 15px 0px 0px;
 
 }
@@ -90,7 +97,7 @@ img {
 }
 
 .navigationmobile a {
-    color: white;
+    color: var(--mainbrandcolor);
     text-decoration: none;
     font-size: 2rem;
 }
@@ -100,7 +107,7 @@ img {
 .search-input {
     display: none;
     transition: all;
-    transform: translate(0px, -60px);
+    transform: translate(0px, -70px);
     margin: 15px;
     bottom: 0;
     left: 0;
@@ -112,13 +119,13 @@ img {
 .pullsearch:active,
 .pullsearch:hover .search-input {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .srch {
     padding: 15px;
     font-size: 1.5rem;
-    border: 1px solid var(--mainbrandcolor);
+    border: 2px solid var(--mainbrandcolor);
     border-radius: 7px;
     width: 100%;
 }
@@ -128,7 +135,7 @@ img {
     border-radius: 7px;
     background-color: white;
     color: var(--mainbrandcolor);
-    border: 1px solid var(--mainbrandcolor);
+    border: 2px solid var(--mainbrandcolor);
 }
 
 .srchbtn:active {
@@ -151,8 +158,7 @@ h2 {
     font-family: var(--mainbrandfont);
     font-weight: 500;
     font-size: 2.8rem;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 1rem;
 }
 
 h3 {
@@ -164,6 +170,7 @@ h3 {
 p {
     font-family: var(--secondarybrandfont);
     line-height: 1.8rem;
+    color: var(--paragraphblue);
 }
 
 .button {
@@ -215,9 +222,19 @@ button:active {
 
 .featured {
     margin: 30px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
 }
+
+.baguette,
+.ciabatta,
+.sourdough,
+.challah,
+.croissant,
+.brownbread {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 /* Styling cards for bestsellers */
 
@@ -236,11 +253,13 @@ button:active {
 .cardtitles {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
+
 .cardtitles h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 .addtocart {
@@ -265,7 +284,11 @@ button:active {
 }
 
 .aboutbakery {
-    margin: 30px;
+    margin: 2rem;
+}
+
+.aboutbakery p {
+    margin-top: 1rem;
 }
 
 
@@ -274,8 +297,8 @@ button:active {
 footer {
     background-color: var(--mainbrandcolor);
     color: white;
-    padding: 30px;
-    padding-bottom: 80px;
+    padding: 2rem;
+    padding-bottom: 6rem;
 }
 
 .copyline {
@@ -318,6 +341,7 @@ footer button {
 
 footer input {
     grid-column: 1 / span 3;
+    font-size: 1.2rem;
     padding: 10px;
     border: 1px solid white;
     border-radius: 5px;
@@ -332,17 +356,17 @@ footer a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 0.5fr;
+    grid-template-areas:
+    "list1 list2"
+    "social social";
 }
 
 .social {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 1;
+    grid-area: social;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-size: 1.5rem;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 footer hr {
@@ -356,6 +380,15 @@ footer hr {
 ----------------------------- */
 
 @media screen and (min-width:800px) {
+
+    .container {
+        margin: 0;
+    }
+
+    .container h2 {
+        font-size: 3.5rem;
+        margin-top: 4rem;
+    }
 
     .bannerdesktop {
         display: block;
@@ -381,11 +414,15 @@ footer hr {
     h1 {
         grid-area: title;
         font-size: 6rem;
+        text-align: right;
         line-height: 5rem;
     }
 
     .deskgridheader p {
         grid-area: text;
+        margin-left: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         font-size: 1.4rem;
         line-height: 2rem;
     }
@@ -393,13 +430,13 @@ footer hr {
     .titlebut {
         grid-area: button;
         text-align: left;
-        margin-left: 30px;
         margin-top: 0;
     }
 
     /* Style navigation */
     
-    .navigationmobile {
+    .navigationmobile,
+    hr {
         display: none;
     }
 
@@ -413,7 +450,7 @@ footer hr {
 
     .desknav {
         display: flex;
-        background-color: var(--mainbrandcolor);
+        background-color: white;
         margin-left: 10px;
         margin-right: 10px;
         top: 0;
@@ -421,6 +458,7 @@ footer hr {
         right: 0;
         z-index: 5;
         position: fixed;
+        border: 2px solid var(--mainbrandcolor);
         border-radius: 0px 0px 15px 15px;
         display: flex;
         align-items: center;
@@ -430,7 +468,7 @@ footer hr {
     
     .desknav a {
         text-decoration: none;
-        color: white;
+        color: var(--mainbrandcolor);
         text-decoration: none;
         font-size: 2rem;
         font-family: var(--mainbrandfont);
@@ -457,7 +495,7 @@ footer hr {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
         margin: 0 auto;
-        max-width: 1200px;
+        max-width: 1100px;
     }
 
     .aboutimg {
@@ -470,14 +508,89 @@ footer hr {
     .aboutdesktopimg {
         display: block;
     }
+
+    .aboutdesktopimg {
+        margin-top: 5rem;
+    }
+    
+    .aboutbakery {
+        margin: 0
+    }
+
+    .aboutbakery h2,
+    .aboutbakery p {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .aboutbakery h2 {
+        font-size: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .aboutbakery p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    /* Styling footer desktop */
+
+    footer h3 {
+        font-size: 3rem;
+    }
+
+    footer p {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .email {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .footerlists {
+        margin-top: 3rem;
+        font-size: 1.2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "list1 list2 social";
+    }
+
+    .social {
+        display: none;
+    }
+    
+    .social2 {
+        grid-area: social;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        font-size: 1.2rem;
+    }
+
+    footer {
+        padding-bottom: 1rem;
+    }
+    
+
 }
 
 
 
 /* Just some margin adjustments */
 
-@media screen and (max-width:1300px) {
-    .featured {
+@media screen and (max-width:1200px) {
+    .featured,
+    .aboutbakery h2,
+    .aboutbakery p {
         margin-left: 2rem;
         margin-right: 2rem;
     }
