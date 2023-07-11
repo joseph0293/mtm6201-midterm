@@ -10,6 +10,10 @@
     --secondarybrandfont: Montserrat;
 }
 
+input {
+    color: var(--paragraphblue);
+}
+
 .container {
     margin: 0 auto;
     color: var(--mainbrandcolor);
@@ -53,11 +57,7 @@ img {
 
 /* animate nav icons on click */
 
-.homeanim,
-.categanim,
-.searchanim,
-.shopanim,
-.searchanim {
+.navanim {
     transition-duration: 0.2s;
     transition-timing-function: ease;
     transition-property: transform;
@@ -66,7 +66,8 @@ img {
 .homeanim:active,
 .categanim:active,
 .shopanim:active,
-.searchanim:active {
+.searchanim:active,
+.navanim:active {
     transform: translateY(-15px);
 }
 
@@ -173,7 +174,7 @@ p {
     color: var(--paragraphblue);
 }
 
-.button {
+.buttonwhite {
     margin-top: 40px;
     margin-bottom: 50px;
     display: block;
@@ -202,7 +203,7 @@ button:active {
     background-color: #0000cf;
 }
 
-.button a {
+.buttonwhite a {
     text-decoration: none;
     text-align: center;
     font-family: var(--secondarybrandfont);
@@ -210,12 +211,13 @@ button:active {
     font-weight: 600;
     font-size: large;
     background-color: white;
-    border: 1px solid var(--mainbrandcolor);
+    border: 2px solid var(--mainbrandcolor);
     border-radius: 10px;
     padding: 15px;
 }
 
-.button a:hover {
+.buttonwhite a:hover,
+.buttonwhite a:active {
     background-color: var(--mainbrandcolor);
     color: white;
 }
@@ -272,7 +274,7 @@ button:active {
 }
 
 .counter {
-    border: 1px solid var(--mainbrandcolor);
+    border: 2px solid var(--mainbrandcolor);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -285,6 +287,10 @@ button:active {
 
 .aboutbakery {
     margin: 2rem;
+}
+
+.aboutbakery h2 {
+    margin-bottom: 1rem;
 }
 
 .aboutbakery p {
@@ -321,6 +327,10 @@ footer p,
 footer input {
     text-align: left;
     margin-left: 0;
+}
+
+footer p {
+    color: white;
 }
 
 .email {
@@ -477,15 +487,11 @@ footer hr {
     .search-desk {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     
     .srch {
         padding: 10px;
-    }
-
-    .magnifydesk {
-        padding-left: 10px;
     }
 
     /* Styling Categories/Bestsellers section */
