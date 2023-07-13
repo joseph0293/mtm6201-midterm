@@ -72,6 +72,7 @@ img {
 }
 
 
+
 /* Pinning navigation to bottom and styling */
 
 .navigationmobile {
@@ -168,6 +169,12 @@ h3 {
     font-size: 1.5rem;
 }
 
+h4 {
+    font-family: var(--mainbrandfont);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
 p {
     font-family: var(--secondarybrandfont);
     line-height: 1.8rem;
@@ -215,6 +222,12 @@ button:active {
     border-radius: 10px;
     padding: 15px;
 }
+/* So that nav bar doesn't hide the heading */
+
+.shopbread {
+    margin-bottom: 1rem;
+}
+
 
 .buttonwhite a:hover,
 .buttonwhite a:active {
@@ -237,8 +250,7 @@ button:active {
     justify-content: space-between;
 }
 
-
-/* Styling cards for bestsellers */
+/* Styling cards for Week Specials */
 
 .cardimg {
     margin-top: 20px;
@@ -362,6 +374,18 @@ footer a {
     line-height: 2rem;
 }
 
+.hours,
+.address {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hours h4,
+.address h4 {
+    margin-bottom: 1rem;
+}
+
+
 .footerlists {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -404,7 +428,8 @@ footer hr {
         display: block;
     }
 
-    .banner {
+    .banner,
+    .aboutbakery hr {
         display: none;
     }
     .deskgridheader {
@@ -445,8 +470,7 @@ footer hr {
 
     /* Style navigation */
     
-    .navigationmobile,
-    hr {
+    .navigationmobile {
         display: none;
     }
 
@@ -559,8 +583,22 @@ footer hr {
         grid-template-rows: 1fr;
     }
 
+    strong {
+        font-weight: 600;
+    }
+
+    .othercontact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer h4 {
+        font-size: 2rem;
+    }
+
     .footerlists {
-        margin-top: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
         font-size: 1.2rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -582,9 +620,17 @@ footer hr {
         font-size: 1.2rem;
     }
 
+    .social2 i {
+        font-size: 1.2rem;
+        margin-right: 0.4rem;
+    }
+    
+
     footer {
         padding-bottom: 1rem;
     }
+
+    
     
 
 }
